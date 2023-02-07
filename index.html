@@ -8,6 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <script src="main.js"></script>
     <link rel="stylesheet" href="style.css">
     <title>App - Relaxsound</title>
 </head>
@@ -18,24 +19,26 @@
     </div>
     <div class="container">
         <div class="reproductor">
-            <img src="img/cover.png" alt="cover">
+            <img src="img/cover.png" alt="cover" id="cover">
+            <!-- Audio HTML Media elememt -->
+            <audio src="" id="audio"></audio>
             <div class="controls">
                 <h1>Playlist Jazz</h1>
-                <h2>weightless - sleep</h2>
+                <h2 class="tittle" id="tittle">weightless - sleep</h2>
                 <div class="progress-container">
                     <section class="progress"></section>
                 </div>
-                <i class="ri-skip-back-line"></i>
-                <i class="ri-pause-line"></i>
-                <i class="ri-play-line"></i>
-                <i class="ri-skip-forward-line"></i>
+                <i class="ri-skip-back-line" id="prev"></i>
+                <i class="ri-pause-line" id=""></i>
+                <i class="ri-play-line" id="play"></i>
+                <i class="ri-skip-forward-line" id="next"></i>
                 <i class="ri-volume-up-line"></i>
             </div>
         </div>
     </div>
     <div class="cards">
         <div class="mode1">
-            <a href=""><span class="material-symbols-outlined">relax</span> Chill</a>
+            <a href=""><span class="material-symbols-outlined" id="songs">relax</span> Chill</a>
         </div>
         <div class="mode2">
             <a href=""><span class="material-symbols-outlined">menstrual_health</span> Sleep</a>
