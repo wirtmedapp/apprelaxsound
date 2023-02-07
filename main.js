@@ -2,18 +2,18 @@ const songList = [
     {
         title: "Acoustic Breeze",
         file: "acousticbreeze.mp3",
-        cover: "1.jpeg"
+        cover: "cover.png"
 
     },
     {
         title: "A New Beginning",
         file: "anewbeginning.mp3",
-        cover: "2.jpeg"
+        cover: "cover.png"
     },
     {
         title: "Creative Minds",
         file: "creativeminds.mp3",
-        cover: "3.jpeg"
+        cover: "cover.png"
     },
 ]
 
@@ -51,7 +51,7 @@ prev.addEventListener("click", () => prevSong())
 function loadSongs() {
     songList.forEach((song, index) => {
         // Crear li
-        const li = document.createElement("li")
+        const span = document.createElement("span")
         // Crear a
         const link = document.createElement("a")
         // Hidratar a
@@ -62,7 +62,7 @@ function loadSongs() {
         // Añadir a li
         li.appendChild(link)
         // Aañadir li a ul
-        songs.appendChild(li)
+        songs.appendChild(span)
     })
 }
 
@@ -96,11 +96,11 @@ function setProgress(event) {
 // Actualiar controles
 function updateControls() {
     if (audio.paused) {
-        play.classList.remove("fa-pause")
-        play.classList.add("fa-play")
+        play.classList.remove("ri-pause-line")
+        play.classList.add("ri-play-line")
     } else {
-        play.classList.add("fa-pause")
-        play.classList.remove("fa-play")
+        play.classList.add("ri-pause-line")
+        play.classList.remove("ri-play-line")
     }
 }
 
